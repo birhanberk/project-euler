@@ -4,8 +4,8 @@
 # What is the largest prime factor of the number 600851475143 ?
 
 def allprimes(n):
-  """bir sayýdan küçük bütün asal sayýlarý dizi olarak döndüren fonksiyon"""
-  primes=[]
+  # bir sayıdan küçük bütün asal sayıları dizi olarak döndüren fonksiyon
+  primes = []
   for i in range(2, n + 1):
     primes.append(i)
   for x in range(0, int(n / 2) + 1):
