@@ -1,5 +1,5 @@
 def isprime(a):
-  """bir sayýnýn asal olup olmadýðýný kontrol eden fonksiyon"""
+  # bir sayının asal olup olmadığını kontrol eden fonksiyon
   i = 3
   if(a < 2):
     return(0)
