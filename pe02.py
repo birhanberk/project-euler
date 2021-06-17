@@ -6,7 +6,7 @@
 
 n1 = 1
 n2 = 2
-toplam=2
+toplam = 2
 for i in range(1, 50):
   fib = n1 + n2
   n1 = n2
