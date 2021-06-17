@@ -1,34 +1,7 @@
-"""
-x=0
-toplam=2
-for i in range(3,2000000,2):
-  x=0
-  for j in range(3,i,2):
-    if(j**2<=i):
-      if(i%j==0):
-        x+=1
-        if(x<=1):
-          break
-    else:
-      break
-  if(x==0):
-    toplam+=i
-print(toplam)
-"""
-"""
-dizi = [0] * 2000000
-asal = 3
-toplam = 2
-while asal < 2000000:
-    if dizi[asal] == 0:
-        toplam += asal
-        i = asal
-        while i < 2000000:
-            dizi[i] = 1
-            i += asal
-    asal += 2
-print(toplam)
-"""
+# Problem 10 Summation of primes
+
+# The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+# Find the sum of all the primes below two million.
 
 def allprimes(n):
     primes=[]
