@@ -4,7 +4,7 @@
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
 def isprime(a):
-    """bir sayýnýn asal olup olmadýðýný kontrol eden fonksiyon"""
+    # bir sayının asal olup olmadığını kontrol eden fonksiyon
     i = 3
     if(a < 2):
         return False
