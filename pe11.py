@@ -25,10 +25,10 @@
 # What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
 
 def largest_Product_in_a_Grid(dizi):
-  carpimListesi=[]
+  carpimListesi = []
   for i in range(0, len(dizi)):
     for j in range(0, len(dizi)):
-      sonucListe=[]
+      sonucListe = []
       asagi = asagiCarp(dizi, i, j)
       sonucListe.append(asagi)
       sag = sagCarp(dizi, i, j)
@@ -44,32 +44,32 @@ def largest_Product_in_a_Grid(dizi):
   return enBuyukCarpimSonucu
 
 def asagiCarp(dizi, i, j):
-  if(i < len(dizi)-3):
-    return dizi[i][j] * dizi[i+1][j] * dizi[i+2][j] * dizi[i+3][j]
+  if(i < len(dizi) - 3):
+    return dizi[i][j] * dizi[i + 1][j] * dizi[i + 2][j] * dizi[i + 3][j]
   else:
     return 0
 
 def sagCarp(dizi, i, j):
-  if(j < len(dizi)-3):
-    return dizi[i][j] * dizi[i][j+1] * dizi[i][j+2] * dizi[i][j+3]
+  if(j < len(dizi) - 3):
+    return dizi[i][j] * dizi[i][j + 1] * dizi[i][j + 2] * dizi[i][j + 3]
   else:
     return 0
 
 def solAltCarp(dizi, i, j):
-  if(i < (len(dizi)-3) and j > 2):
-    return dizi[i][j] * dizi[i+1][j-1] * dizi[i+2][j-2] * dizi[i+3][j-3]
+  if(i < (len(dizi) - 3) and j > 2):
+    return dizi[i][j] * dizi[i + 1][j - 1] * dizi[i + 2][j - 2] * dizi[i + 3][j - 3]
   else:
     return 0
 
 def sagAltCaprazCarp(dizi, i, j):
-  if(i < len(dizi)-3 and j < len(dizi)-3):
-    return dizi[i][j] * dizi[i+1][j+1] * dizi[i+2][j+2] * dizi[i+3][j+3]
+  if(i < len(dizi) - 3 and j < len(dizi) - 3):
+    return dizi[i][j] * dizi[i + 1][j + 1] * dizi[i + 2][j + 2] * dizi[i + 3][j + 3]
   else:
     return 0
 
 def enBuyukBul(sonucListe):
   sonuc = sonucListe[0]
-  for i in range(0,4):
+  for i in range(0, 4):
     if(sonuc < sonucListe[i]):
       sonuc = sonucListe[i]
   return sonuc
