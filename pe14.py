@@ -9,22 +9,24 @@
 # Which starting number, under one million, produces the longest chain?
 # NOTE: Once the chain starts the terms are allowed to go above one million.
 
-x = 2
-sayac = 1
+baslangic = 2
 enbuyuk = 1
 hafiza = 0
-for i in range(x, 1000000):
-    hafiza = i
+sayi = 0
+for i in range(baslangic, 1000000):
+    sayac = 0
+    sayi = i
     while True:
-        if(i == 1):
+        if(sayi == 1):
             break
-        elif(i % 2 == 0):
-            i = int(i / 2)
+        elif(sayi % 2 == 0):
+            sayi = sayi / 2
             sayac += 1
-        elif(i % 2 == 1):
-            i = int((i * 3) + 1)
+        elif(sayi % 2 == 1):
+            sayi = sayi * 3 + 1
             sayac += 1
     if(enbuyuk < sayac):
         enbuyuk = sayac
-    sayac = 0
-print(enbuyuk)
+        hafiza = i
+    
+print(hafiza)
