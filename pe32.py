@@ -35,7 +35,7 @@ for i in range(10,100): # 2 x 3
     islem(i, j)
 
 sonuc = 0
-toplam2 = set(toplam)
-for i in toplam2:
+toplam = set(toplam)
+for i in toplam:
   sonuc += i
 print(sonuc)
