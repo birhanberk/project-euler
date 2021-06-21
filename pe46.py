@@ -1,15 +1,30 @@
-f = open("primes-to-100k.txt", "r")
-lines = f.read().split("\n")
-f.close()
+# Problem 46 Goldbach's other conjecture
 
-# n = p + 2 * pow(x, 2)
-# 9 = 7 + 2�1^2
-# 15 = 7 + 2�2^2
+# It was proposed by Christian Goldbach that every odd composite number can be written as the sum of a prime and twice a square.
+# 9 = 7 + 2×12
+# 15 = 7 + 2×22
+# 21 = 3 + 2×32
+# 25 = 7 + 2×32
+# 27 = 19 + 2×22
+# 33 = 31 + 2×12
+# It turns out that the conjecture was false.
+# What is the smallest odd composite that cannot be written as the sum of a prime and twice a square?
+
+def allprimes(n):
+    primes = []
+    for i in range(2, n + 1):
+        primes.append(i)
+    for x in range(0, int(n / 2) + 1):
+        if(primes[x] != 0):
+            for i in range(x + primes[x], n - 1, primes[x]):
+                primes[i] = 0
+    primes.sort()
+    return(primes[primes.count(0):])
 
 def bul(n):
-  if(str(n) in lines):
+  if(n in primes):
     return False
-  for p in lines:
+  for p in primes:
     prime = int(p)
     if(prime >= n):
       break
@@ -20,7 +35,8 @@ def bul(n):
         return False
   return True
 
-for i in range(9,10000,2):
+primes = allprimes(10000)
+for i in range(9, 10000, 2):
   if(bul(i)):
     print(i)
     break
